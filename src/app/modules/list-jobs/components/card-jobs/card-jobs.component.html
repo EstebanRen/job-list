@@ -1,17 +1,23 @@
 <div *ngFor="let job of jobListData">
-    <div class="card">
+    <div class="card" [ngClass]="{ 'featured-card': isFeatured(job) }">
         <div class="card-image">
-          <img [src]="'assets/images/photosnap.svg'" alt="Image" />
+            <img [src]="'assets/' + job.logo" alt="Image" />
         </div>
         <div class="card-details">
-          <div class="name"> photosnap </div>
-          <div class="title"> Seniro Frontend Developer </div>
-          <div class="text"> tres  </div>
+            <div class="name">
+                {{ job.company }}
+                <span *ngIf="job.new==true" class="tag new">NEW!</span>
+                <span *ngIf="job.featured==true" class="tag featured">FEATURED!</span>
+            </div>
+            <div class="title">{{ job.position }}</div>
+            <div class="text">{{ job.postedAt }} &nbsp;&bull;&nbsp; {{ job.contract }} &nbsp;&bull;&nbsp; {{
+                job.location }}</div>
         </div>
         <div class="card-buttons">
-          <button> dos</button>
-          <button> tres</button>
+            <span class="role" (click)="onRoleButtonClick(job.role)">{{ job.role }}</span>
+            <span class="level" (click)="onLevelButtonClick(job.level)">{{ job.level }}</span>
+            <span *ngFor="let language of job.languages" class="language" (click)="onLanguageButtonClick(language)">{{ language }}</span>
+            <span *ngFor="let tool of job.tools" class="tool" (click)="onToolButtonClick(tool)">{{ tool }}</span>
         </div>
-      </div>
-      
+    </div>
 </div>

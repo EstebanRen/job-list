@@ -1,1 +1,23 @@
-<p>filter-jobs works!</p>
+<div class="filter-summary" *ngIf="hasFiltersApplied()">
+    <div class="filters">
+        <span *ngIf="jobToSearch.role" class="filter" (click)="onRoleFilterRemove()">
+            <span class="filter-text">{{ jobToSearch.role }}</span>
+            <button class="filter-remove" (click)="onRoleFilterRemove()">x</button>
+        </span>
+        <span *ngIf="jobToSearch.level" class="filter" (click)="onLevelFilterRemove()">
+            <span class="filter-text">{{ jobToSearch.level }}</span>
+            <button class="filter-remove" (click)="onLevelFilterRemove()">x</button>
+        </span>
+        <span *ngFor="let language of jobToSearch.languages" class="filter" (click)="onLanguageFilterRemove(language)">
+            <span class="filter-text">{{ language }}</span>
+            <button class="filter-remove" (click)="onLanguageFilterRemove(language)">x</button>
+        </span>
+        <span *ngFor="let tool of jobToSearch.tools" class="filter" (click)="onToolFilterRemove(tool)">
+            <span class="filter-text">{{ tool }}</span>
+            <button class="filter-remove" (click)="onToolFilterRemove(tool)">x</button>
+        </span>
+    </div>
+    <div class="clear-button">
+        <button class="filter-clear" (click)="clearAllFilters()">Clear</button>
+    </div>
+</div>

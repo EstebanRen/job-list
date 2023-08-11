@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
-import { Job } from '../entities/model-jobs';
+import { Job, JobToSearch } from '../entities/model-jobs';
 
 interface State {
   jobData: Job[];
-  filtersToSearch:string[];
+  filtersToSearch:JobToSearch;
   error: unknown;
 }
 
@@ -13,7 +13,12 @@ interface State {
 export class JobStateService {
   #state = new BehaviorSubject<State>({
     jobData:[],
-    filtersToSearch:[],
+    filtersToSearch:{
+      role: '',
+      level: '',
+      languages: [],
+      tools:[]
+    },
     error: null,
   });
 
@@ -32,7 +37,7 @@ export class JobStateService {
       jobData:jobData,
     });
   }
-  setFiltersToSearch(jobSearch: string[]) {
+  setFiltersToSearch(jobSearch: JobToSearch) {
     this.#state.next({
       ...this.#state.value,
       filtersToSearch:jobSearch,

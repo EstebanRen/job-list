@@ -1,0 +1,59 @@
+.filter-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--light-grayish-cyan-bg);
+    border-radius: 5px;
+    height: 40px;
+    width: 80vw;
+    overflow-x: auto;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter {
+    display: inline-flex;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: var(--desaturated-dark-cyan);
+    cursor: pointer;
+}
+
+.filter-text {
+    background-color: var(--light-grayish-cyan-filter);
+    padding: 5px;
+    border-radius: 3px 0 0 3px;
+    font-size: 14px;
+}
+
+.filter-remove {
+    font-size: 16px;
+    padding: 5px 8px;
+    border-radius: 0 3px 3px 0;
+    background-color: var(--desaturated-dark-cyan);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.filter-remove:hover {
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+.filter-clear {
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: var(--desaturated-dark-cyan);
+    ;
+    cursor: pointer;
+    background: none;
+}

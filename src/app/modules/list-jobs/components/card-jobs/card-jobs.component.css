@@ -1,49 +1,113 @@
 .card {
     display: flex;
     flex-direction: row;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
-  }
-  
-  .card-image img {
+    background-color: var(--light-grayish-cyan-bg);
+    box-shadow: 0px 5px 10px -5px var(--desaturated-dark-cyan);
+    cursor: pointer;
+
+}
+
+.featured-card {
+    border-left: 4px solid var(--desaturated-dark-cyan);
+}
+
+.card-image img {
     width: 100%;
     max-height: 150px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
-  }
-  
-  .card-details {
-    flex: 1;
+
+}
+
+.card-image {
+    padding: 0 20px;
+}
+
+.card-details {
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .name {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .title,
-  .text {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .card-buttons {
+    justify-content: space-around;
+}
+
+.name {
+    color: var(--desaturated-dark-cyan);
+    font-size: 12px;
     display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
+    font-weight: 700px;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.text {
+    color: var(--dark-grayish-cyan);
+    font-size: 15px;
+}
+
+
+.title {
+    color: var(--desaturated-dark-cyan);
+    font-weight: 700px;
+    font-size: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.tag.new {
+    background-color: var(--desaturated-dark-cyan);
+}
+
+.tag.featured {
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+.card-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.language,
+.tool,
+.role,
+.level {
+    cursor: pointer;
+    background-color: var(--light-grayish-cyan-filter);
+    color: var(--desaturated-dark-cyan);
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 12px;
+}
+
+.language:hover,
+.tool:hover,
+.role:hover,
+.level:hover {
+    background-color: var(--desaturated-dark-cyan);
+    color: white;
+}
+
+button {
     padding: 5px 10px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
-  }
+}

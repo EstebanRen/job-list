@@ -23,15 +23,17 @@
   }
   
   .list {
-    background-color: #F0FAFB;
+    background-color: var(--light-grayish-cyan-filter);
     height: 80vh;
     z-index: 2;
-    overflow: hidden;
+    overflow: auto;
+    top:20vh;
+    padding-top: 50px;
   }
   
   .overlay-div {
     position: absolute;
-    top: calc(30vh - 50px);
+    top: calc(20vh - 50px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -41,5 +43,5 @@
     background-image: url('../../../assets/images/bg-header-desktop.svg');
     background-size: cover; 
     background-position: center; 
-    height: 30vh; 
+    height: 20vh; 
   }

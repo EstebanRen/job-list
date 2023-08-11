@@ -12,4 +12,10 @@ export interface Job {
     location: string;
     languages: string[];
     tools: string[];
-  }
+}
+export interface JobToSearch  {
+    role: string,
+    level: string,
+    languages: string[],
+    tools:string[]
+}
