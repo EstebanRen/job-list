@@ -57,3 +57,14 @@
     cursor: pointer;
     background: none;
 }
+@media only screen and (max-width: 688px) {
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter-summary {
+        min-height: 50px;
+        max-height: 90px;
+        height: auto;
+    }
+}
