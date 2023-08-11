@@ -1,0 +1,45 @@
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header,
+  .map,
+  .overlay-div {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #5DA5A4;
+    height: 20vh;
+    overflow: hidden;
+  }
+  
+  .list {
+    background-color: #F0FAFB;
+    height: 80vh;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .overlay-div {
+    position: absolute;
+    top: calc(30vh - 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  
+  .background-image {
+    background-image: url('../../../assets/images/bg-header-desktop.svg');
+    background-size: cover; 
+    background-position: center; 
+    height: 30vh; 
+  }
